@@ -10,24 +10,8 @@
 </template>
 
 <script>
-import { openURL } from 'quasar'
 export default {
-  name: 'LayoutDefault',
-
-  data () {
-    return {
-      darkMode: false,
-      miniState: false,
-      comp_model: false,
-      leftDrawerOpen: this.$q.platform.is.desktop
-    }
-  },
-  methods: {
-    openURL,
-    onDarkMode () {
-      this.$q.dark.set(this.darkMode)
-    }
-  }
+  name: 'LayoutDefault'
 }
 </script>
 <style>

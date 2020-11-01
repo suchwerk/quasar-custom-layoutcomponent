@@ -12,7 +12,6 @@ export default {
   created () {
     // Check if layout component
     // has already been registered.
-    console.log('creating layout', this.name)
     if (!Vue.options.components[this.name]) {
       Vue.component(
         this.name,
@@ -24,7 +23,7 @@ export default {
     this.$parent.$emit('update:layout', this.name)
   },
   render () {
-    console.log('render', this.$slots.default[0])
+    console.log('render', this.$options.name, this.name, this.$slots.default[0])
     return this.$slots.default[0]
   }
 }
